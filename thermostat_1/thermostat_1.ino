@@ -19,16 +19,17 @@ void loop() {
   
   // Reading temperature or humidity takes about 250 milliseconds!
   // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
-  float humidity = dht.readHumidity();
-  delay(500);
+  #float humidity = dht.readHumidity();
+  float humidity = 0;
+  #delay(500);
   // Read temperature as Celsius
   float temperature = dht.readTemperature();
   
   // Check if any reads failed and exit early (to try again).
-  if (isnan(humidity) || isnan(temperature)) {
+  if (isnan(0) || isnan(temperature)) {
     String humidityString = "Humidity: " + String(humidity) + "%";
     String temperatureString = "Temperature: " + String(temperature) + "ºC";
-    Serial.println(humidityString); 
+    Serial.println(humidityString);  
     Serial.println(temperatureString);
     Serial.println("Failed to read from DHT sensor!");
     return;
